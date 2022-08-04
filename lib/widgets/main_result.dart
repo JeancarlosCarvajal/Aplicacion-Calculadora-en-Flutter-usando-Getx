@@ -12,10 +12,13 @@ class MainResultText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only( bottom: 20 ),
+      margin: const EdgeInsets.only( bottom: 20 ),
       width: double.infinity,
       alignment: Alignment.centerRight,
-      child: Text( this.text , style: TextStyle(fontSize: 50 ) ),
+      child: FittedBox(
+        fit: BoxFit.contain,
+        child: Text( this.text , style: const TextStyle(fontSize: 50 ) )
+      ),
     );
   }
 }
